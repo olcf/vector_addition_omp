@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#BSUB -P <project_id>
+#BSUB -J vec_add_test
+#BSUB -o vec_add_test.%J
+#BSUB -nnodes 1
+#BSUB -W 10
+
+date
+echo " " 
+
+jsrun -n1 -c1 -a1 -bpacked:1 ./vec_add
